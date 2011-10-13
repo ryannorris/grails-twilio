@@ -13,6 +13,10 @@ twilio {
 		auth_token = 'XXXXX'
 	}
 	
+	sms {
+		enable_status_callback = true  // set this to false if you DON'T want twilio to send ACK requests to your application
+	}
+	
 	phones {
 		main = '+16175551212'
 	}

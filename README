@@ -1,0 +1,24 @@
+A Grails Plugin for Interacting with Twilio
+
+https://www.twilio.com
+
+CONFIGURATION
+-------------
+
+You will need to update your config.groovy with a section for twilio like that below
+
+twilio {
+	account {
+		sid = 'XXXXXXX'
+		auth_token = 'XXXXX'
+	}
+	
+	phones {
+		main = '+16175551212'
+	}
+}
+
+Remember that the main phone will need to be your twilio Sandbox number, and that you can only send messages from
+that number to verified twilio numbers.  This restriction doesn't exist for purchased Twilio numbers.
+
+SmsService is responsible for sending SMS messages.  See the SmsController for example usage.

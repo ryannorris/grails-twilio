@@ -51,5 +51,11 @@ twilio {
 	phones {
 		main = '+16175551212'
 	}
+	
+	proxy {
+		host = "123.456.789.101"
+		port = "8080"
+		method = "https"
+	}
 }
 */

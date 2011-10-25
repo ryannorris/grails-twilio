@@ -20,6 +20,17 @@ twilio {
 	phones {
 		main = '+16175551212'
 	}
+	
+	proxy {
+		host = "www"
+		port = "80"
+		method = "http" // or https
+		
+		auth {
+			username = "foo"
+			password = "bar"
+		}
+	}
 }
 
 Remember that the main phone will need to be your twilio Sandbox number, and that you can only send messages from

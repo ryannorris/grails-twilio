@@ -56,6 +56,11 @@ twilio {
 		host = "123.456.789.101"
 		port = "8080"
 		method = "https"
+		
+		auth {
+			username = "username"
+			password = "password"
+		}
 	}
 }
 */

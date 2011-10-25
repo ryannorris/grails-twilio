@@ -13,12 +13,16 @@ class SmsService {
 
 	def send(String destinationPhoneNumber, String message) {
 		if(C.config.twilio?.proxy) {
+			log.debug "proxy use detected, will proxy through ${C.config.twilio?.proxy.method}://${C.config.twilio?.proxy.host}:${C.config.twilio?.proxy.port}"
+			
 			twilioHttpEndpointBean.setProxy(
 				C.config.twilio?.proxy.host, 
 				C.config.twilio?.proxy.port, 
 				C.config.twilio?.proxy.method)
 			
 			if(C.config.twilio.proxy.auth) {
+				log.debug "authenticating for proxy: ${C.config.twilio?.proxy.auth.username}"
+				
 				twilioHttpEndpointBean.auth.basic(
 					C.config.twilio?.proxy.host, 
 					C.config.twilio?.proxy.port, 

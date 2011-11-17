@@ -3,6 +3,8 @@ package grails.twilio
 import groovyx.net.http.ContentType
 import groovyx.net.http.Method
 
+import org.apache.http.auth.params.AuthPNames
+import org.apache.http.client.params.AuthPolicy
 import org.codehaus.groovy.grails.commons.ConfigurationHolder as C
 
 class SmsService {
@@ -28,6 +30,11 @@ class SmsService {
 					C.config.twilio?.proxy.port, 
 					C.config.twilio?.proxy.auth.username, 
 					C.config.twilio?.proxy.auth.password)
+				
+				List<String> authpref = new ArrayList<String>()
+				authpref.add(AuthPolicy.BASIC)
+				
+				twilioEndpointBean.getClient().getParams().setParameter(AuthPNames.PROXY_AUTH_PREF, authpref)
 			}
 		}
 		

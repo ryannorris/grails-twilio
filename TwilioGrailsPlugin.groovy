@@ -1,6 +1,6 @@
 class TwilioGrailsPlugin {
     // the plugin version
-    def version = "0.1c"
+    def version = "0.1d"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.3.7 > *"
     // the other plugins this plugin depends on
@@ -11,9 +11,9 @@ class TwilioGrailsPlugin {
     ]
 
     // TODO Fill in these fields
-    def author = "Your name"
-    def authorEmail = ""
-    def title = "Plugin summary/headline"
+    def author = "Ryan Norris"
+    def authorEmail = "ryannorris@gmail.com"
+    def title = "Twilio"
     def description = '''\\
 Brief description of the plugin.
 '''

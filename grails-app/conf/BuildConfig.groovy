@@ -24,7 +24,9 @@ grails.project.dependency.resolution = {
 		//mavenRepo "http://repository.jboss.com/maven2/"
 	}
 	dependencies {
-		runtime('org.codehaus.groovy.modules.http-builder:http-builder:0.5.1') { excludes 'xml-apis' }
+		runtime('org.codehaus.groovy.modules.http-builder:http-builder:0.5.2') { 
+			excludes 'xml-apis'
+		}
 		test('org.gmock:gmock:0.8.0')
 	}
 }

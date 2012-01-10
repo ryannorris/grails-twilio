@@ -1,4 +1,4 @@
-package grails.twilio
+package grails.plugin.twilio
 
 import groovyx.net.http.ContentType
 import groovyx.net.http.Method
@@ -34,7 +34,7 @@ class SmsService {
 				List<String> authpref = new ArrayList<String>()
 				authpref.add(AuthPolicy.BASIC)
 				
-				twilioEndpointBean.getClient().getParams().setParameter(AuthPNames.PROXY_AUTH_PREF, authpref)
+				twilioHttpEndpointBean.getClient().getParams().setParameter(AuthPNames.PROXY_AUTH_PREF, authpref)
 			}
 		}
 		

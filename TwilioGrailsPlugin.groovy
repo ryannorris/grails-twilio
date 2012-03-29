@@ -1,25 +1,16 @@
 class TwilioGrailsPlugin {
-    // the plugin version
     def version = "0.1d"
-    // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "1.3.7 > *"
-    // the other plugins this plugin depends on
-    def dependsOn = [:]
-    // resources that are excluded from plugin packaging
-    def pluginExcludes = [
-            "grails-app/views/error.gsp"
-    ]
+    def grailsVersion = "1.3.3 > *"
 
-    // TODO Fill in these fields
-    def author = "Your name"
+    def author = "Ryan Norris"
     def authorEmail = ""
-    def title = "Plugin summary/headline"
-    def description = '''\\
-Brief description of the plugin.
-'''
+    def title = "Twilio Plugin"
+    def description = "Add support for both sending and receiving phone calls and text messages via [Twilio|http://www.twilio.com]."
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/grails-twilio"
+    def license = "APACHE"
+    def documentation = "https://github.com/ryannorris/grails-twilio"
+    def scm = [url: "https://github.com/ryannorris/grails-twilio"]
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before 

@@ -1,6 +1,7 @@
 package grails.plugin.twilio
 
 import grails.test.*
+import grails.test.mixin.*
 import groovyx.net.http.AuthConfig;
 import groovyx.net.http.HTTPBuilder;
 import groovyx.net.http.Method;

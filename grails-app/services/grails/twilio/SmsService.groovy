@@ -5,8 +5,9 @@ import groovyx.net.http.Method
 
 import org.apache.http.auth.params.AuthPNames
 import org.apache.http.client.params.AuthPolicy
-import org.codehaus.groovy.grails.commons.ConfigurationHolder as C
-
+//Grails < 2.4 import org.codehaus.groovy.grails.commons.ConfigurationHolder as C
+//Grails >=2.4
+import grails.util.Holders as C
 class SmsService {
 
 	def twilioHttpEndpointBean
